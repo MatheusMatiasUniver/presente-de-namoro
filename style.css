@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+  font-family: 'Open Sans', sans-serif;
+  color: #e91e63;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 40px 20px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.titulo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.mensagem,
+.lead,
+#mensagem,
+#titulo,
+h2,
+p {
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  word-break: break-word;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+button,
+.btn {
+  background-color: #ffffff !important;
+  color: #e91e63 !important;
+  border: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 90%;
+  max-width: 320px;
+  font-size: 1.1rem;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #f0f0f0 !important;
+  transform: scale(1.05);
+}
+
+.sombra {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  color: #ff69b4;
+  animation: cair 5s linear infinite;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #e91e63;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 20px;
+}
+
+.spinner {
+  font-size: 40px;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
