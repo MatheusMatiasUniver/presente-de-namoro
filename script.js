@@ -84,7 +84,6 @@ function mostrarMensagem() {
   // Espera a imagem e o tempo mínimo
   Promise.all([carregarImagem, tempoMinimo]).then(() => {
     // Atualiza o conteúdo
-    titulo.innerText = `Momento ${indice + 1}`;
     texto.innerText = atual.texto;
     foto.src = atual.imagem;
 
